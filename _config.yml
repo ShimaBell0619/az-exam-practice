@@ -1,0 +1,37 @@
+# GitHub Pages Configuration
+
+# Theme
+theme: minima
+
+# Site settings
+title: "Azure 試験対策リポジトリ"
+description: "Azure 認定試験の学習資料をまとめたリポジトリです"
+url: "https://shimabell0619.github.io"
+baseurl: "/az-exam-practice"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Markdown processing
+markdown: kramdown
+highlighter: rouge
+
+# Build settings
+exclude:
+  - .github/
+  - .git/
+  - .gitignore
+  - .obsidian/
+  - _old/
+  - README.md
+
+# Include files
+include:
+  - _prompt-samples/
+
+# Navigation
+header_pages:
+  - index.md
