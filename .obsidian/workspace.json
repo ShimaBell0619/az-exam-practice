@@ -11,10 +11,14 @@
             "id": "c336a461556094ae",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "az-400/devops-security/Azure-Security-Benchmark-DevOps-Complete-Guide.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Azure-Security-Benchmark-DevOps-Complete-Guide"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "az-400/devops-security/Azure-Security-Benchmark-DevOps-Complete-Guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Azure-Security-Benchmark-DevOps-Complete-Guide"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "az-400/devops-security/Azure-Security-Benchmark-DevOps-Complete-Guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Azure-Security-Benchmark-DevOps-Complete-Guide"
             }
           },
           {
@@ -121,7 +127,7 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": true,
                 "showSearch": false,
                 "searchQuery": ""
@@ -136,16 +142,29 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "az-400/devops-security/Azure-Security-Benchmark-DevOps-Complete-Guide.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Azure-Security-Benchmark-DevOps-Complete-Guide"
+            }
+          },
+          {
+            "id": "f84391c723b36565",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "pinned": true,
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -164,8 +183,8 @@
   },
   "active": "08da163a88a7c464",
   "lastOpenFiles": [
-    "Untitled.canvas",
     "az-400/devops-security/DevOps-Security-Checklist.md",
+    "Untitled.canvas",
     "az-400/devops-security/Azure-Security-Benchmark-DevOps-Complete-Guide.md",
     "az-400/devops-security",
     "az-400",
