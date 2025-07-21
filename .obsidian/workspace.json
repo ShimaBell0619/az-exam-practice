@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "818e5c7669ad409e",
+    "type": "split",
+    "children": [
+      {
+        "id": "7b0ddd619c894812",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c336a461556094ae",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dbf5f7bbbc49a370",
+    "type": "split",
+    "children": [
+      {
+        "id": "7f2a467e5e17ef62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "defc590a8063e23d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e833873a56d7fca9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6398bb78c09bf1bc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 289.50390243530273
+  },
+  "right": {
+    "id": "2dc3c5d989ef8580",
+    "type": "split",
+    "children": [
+      {
+        "id": "52ac2ebfe51b8a05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3290d0a3393cc1e4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "aa3ca1f4a15ee707",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "66859fd5a7969efd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "08da163a88a7c464",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "08da163a88a7c464",
+  "lastOpenFiles": [
+    "Untitled.canvas",
+    "az-400/devops-security/DevOps-Security-Checklist.md",
+    "az-400/devops-security/Azure-Security-Benchmark-DevOps-Complete-Guide.md",
+    "az-400/devops-security",
+    "az-400",
+    "az-204/study/relational-data-storage-design.md",
+    "az-204/study/non-relational-data-storage-design-guide.md",
+    "az-204/practice/practice-questions.md",
+    "az-204/_old/multi-region-hub-spoke-architecture.md",
+    "az-204/_old/03-service-deep-dive.md",
+    "az-204/study",
+    "az-204/practice",
+    "az-204/_old",
+    "az-204",
+    "az-exams/az-400/devops-security/Azure-Security-Benchmark-DevOps-Complete-Guide.md",
+    "az-exams/az-400/devops-security",
+    "Untitled.md",
+    "az-exams",
+    "_old",
+    "_old/system-design/app-service-environment-comparison.md",
+    "az-400/DS-5-DAST-DevOps-Integration-Guide.md",
+    "az-exams/az-400/devops-security/DevOps-Security-Checklist.md",
+    "az-exams/az-400",
+    "az-exams/az-204/study/non-relational-data-storage-design-guide.md",
+    "az-exams/az-204/study/relational-data-storage-design.md",
+    "_old/system-design/azure-frontdoor-multi-environment-design.md",
+    "_old/system-design/multi-region-hub-spoke-architecture-v2.md",
+    "app-service-environment-comparison.md",
+    "az-exams/az-204/_old/multi-region-hub-spoke-architecture.md",
+    "system-design/multi-region-hub-spoke-architecture.md",
+    "az-exams/az-204/practice/practice-questions.md",
+    "non-relational-data-storage-design-guide.md",
+    "az-exams/az-204/_old/03-service-deep-dive.md",
+    "_prompt-samples/README.md",
+    "_prompt-samples/09-best-practices.md",
+    "_prompt-samples/08-troubleshooting-guide.md"
+  ]
+}

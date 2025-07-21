@@ -1,0 +1,420 @@
+<mxfile host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Azure Hub-Spoke Architecture" id="azure-hub-spoke">
+    <mxGraphModel dx="2049" dy="1089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Global Section -->
+        <mxCell id="global-section" value="Global Services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1574" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Front Door -->
+        <mxCell id="front-door" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Front_Doors.svg;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="front-door-label" value="Azure Front Door&#xa;(Global Load Balancer)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="150" width="128" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- WAF -->
+        <mxCell id="waf" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Application_Security_Groups.svg;" vertex="1" parent="1">
+          <mxGeometry x="500" y="80" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="waf-label" value="Web Application&#xa;Firewall (WAF)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="150" width="128" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Custom Domain -->
+        <mxCell id="custom-domain" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/DNS_Zones.svg;" vertex="1" parent="1">
+          <mxGeometry x="700" y="80" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="custom-domain-label" value="Custom Domain&#xa;+ SSL Certificate" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="150" width="128" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Internet Users -->
+        <mxCell id="internet-users" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Globe.svg;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="internet-users-label" value="Global Users" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="128" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- East Japan Region -->
+        <mxCell id="east-japan-region" value="East Japan Region (Primary Hub)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="760" height="880" as="geometry" />
+        </mxCell>
+        
+        <!-- Hub VNet -->
+        <mxCell id="hub-vnet" value="Hub VNet (10.0.0.0/16)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="680" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Firewall -->
+        <mxCell id="azure-firewall" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Firewalls.svg;" vertex="1" parent="1">
+          <mxGeometry x="140" y="360" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-firewall-label" value="Azure Firewall&#xa;(10.0.1.0/24)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="430" width="128" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Private DNS Resolver -->
+        <mxCell id="dns-resolver" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/DNS_Zones.svg;" vertex="1" parent="1">
+          <mxGeometry x="300" y="360" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dns-resolver-label" value="Private DNS Resolver&#xa;(10.0.2.0/24)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="430" width="128" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Key Vault -->
+        <mxCell id="key-vault" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="460" y="360" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key-vault-label" value="Azure Key Vault&#xa;(10.0.4.0/24)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="430" width="128" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Management Subnet -->
+        <mxCell id="management" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Virtual_Machine.svg;" vertex="1" parent="1">
+          <mxGeometry x="620" y="360" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="management-label" value="Management&#xa;(10.0.3.0/24)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="430" width="128" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- East Japan Spokes -->
+        <mxCell id="east-spokes" value="East Japan Spokes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="640" width="680" height="500" as="geometry" />
+        </mxCell>
+        
+        <!-- Web Tier East -->
+        <mxCell id="web-east-vnet" value="Web Tier East&#xa;(10.1.0.0/16)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="120" y="680" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="app-service-east" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="176" y="720" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- API Tier East -->
+        <mxCell id="api-east-vnet" value="API Tier East&#xa;(10.1.10.0/16)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="320" y="680" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="api-mgmt-east" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/API_Management_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="376" y="720" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Function Tier East -->
+        <mxCell id="function-east-vnet" value="Function Tier East&#xa;(10.1.20.0/16)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="520" y="680" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="functions-east" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Function_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="576" y="720" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- West Japan Region -->
+        <mxCell id="west-japan-region" value="West Japan Region (Spokes Only)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="860" y="280" width="760" height="880" as="geometry" />
+        </mxCell>
+        
+        <!-- West Japan Spokes -->
+        <mxCell id="west-spokes" value="West Japan Spokes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="900" y="320" width="680" height="500" as="geometry" />
+        </mxCell>
+        
+        <!-- Web Tier West -->
+        <mxCell id="web-west-vnet" value="Web Tier West&#xa;(10.2.0.0/16)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="940" y="360" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="app-service-west" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="996" y="400" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- API Tier West -->
+        <mxCell id="api-west-vnet" value="API Tier West&#xa;(10.2.10.0/16)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="360" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="api-mgmt-west" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/API_Management_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="1196" y="400" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Function Tier West -->
+        <mxCell id="function-west-vnet" value="Function Tier West&#xa;(10.2.20.0/16)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="360" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="functions-west" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Function_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="1396" y="400" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Monitoring Section -->
+        <mxCell id="monitoring-section" value="Monitoring &amp; Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="900" y="860" width="680" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Log Analytics -->
+        <mxCell id="log-analytics" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Log_Analytics_Workspaces.svg;" vertex="1" parent="1">
+          <mxGeometry x="980" y="900" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="log-analytics-label" value="Log Analytics&#xa;Workspace" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="970" width="128" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Application Insights -->
+        <mxCell id="app-insights" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/devops/Application_Insights.svg;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="900" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="app-insights-label" value="Application&#xa;Insights" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="970" width="128" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Monitor -->
+        <mxCell id="azure-monitor" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/management_governance/Monitor.svg;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="900" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-monitor-label" value="Azure Monitor" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="970" width="128" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections -->
+        
+        <!-- Internet to Front Door -->
+        <mxCell id="connection-1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#ff6666;" edge="1" parent="1" source="internet-users" target="front-door">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="120" as="sourcePoint" />
+            <mxPoint x="280" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Front Door to WAF -->
+        <mxCell id="connection-2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#ff6666;" edge="1" parent="1" source="front-door" target="waf">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="120" as="sourcePoint" />
+            <mxPoint x="480" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- WAF to Custom Domain -->
+        <mxCell id="connection-3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#ff6666;" edge="1" parent="1" source="waf" target="custom-domain">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="120" as="sourcePoint" />
+            <mxPoint x="680" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Front Door to App Services -->
+        <mxCell id="connection-4" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#3399ff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="front-door" target="app-service-east">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="334" y="200" as="sourcePoint" />
+            <mxPoint x="210" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="334" y="200" />
+              <mxPoint x="210" y="200" />
+              <mxPoint x="210" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="connection-5" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#3399ff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="front-door" target="app-service-west">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="334" y="200" as="sourcePoint" />
+            <mxPoint x="1030" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="334" y="200" />
+              <mxPoint x="1030" y="200" />
+              <mxPoint x="1030" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Hub to Spokes connections -->
+        <mxCell id="hub-to-spoke-1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#009900;startArrow=classic;startFill=1;" edge="1" parent="1" source="azure-firewall" target="app-service-east">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="174" y="500" as="sourcePoint" />
+            <mxPoint x="210" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="174" y="500" />
+              <mxPoint x="210" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="hub-to-spoke-2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#009900;startArrow=classic;startFill=1;" edge="1" parent="1" source="azure-firewall" target="api-mgmt-east">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="174" y="500" as="sourcePoint" />
+            <mxPoint x="410" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="174" y="500" />
+              <mxPoint x="410" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="hub-to-spoke-3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#009900;startArrow=classic;startFill=1;" edge="1" parent="1" source="azure-firewall" target="functions-east">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="174" y="500" as="sourcePoint" />
+            <mxPoint x="610" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="174" y="500" />
+              <mxPoint x="610" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Hub to West Japan Spokes -->
+        <mxCell id="hub-to-west-1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#009900;startArrow=classic;startFill=1;" edge="1" parent="1" source="azure-firewall" target="app-service-west">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="390" as="sourcePoint" />
+            <mxPoint x="1030" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="300" />
+              <mxPoint x="1030" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="hub-to-west-2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#009900;startArrow=classic;startFill=1;" edge="1" parent="1" source="azure-firewall" target="api-mgmt-west">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="390" as="sourcePoint" />
+            <mxPoint x="1230" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="300" />
+              <mxPoint x="1230" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="hub-to-west-3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#009900;startArrow=classic;startFill=1;" edge="1" parent="1" source="azure-firewall" target="functions-west">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="390" as="sourcePoint" />
+            <mxPoint x="1430" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="300" />
+              <mxPoint x="1430" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Key Vault to Custom Domain connection -->
+        <mxCell id="keyvault-connection" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#ff9900;startArrow=classic;startFill=1;" edge="1" parent="1" source="key-vault" target="custom-domain">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="494" y="340" as="sourcePoint" />
+            <mxPoint x="734" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="494" y="300" />
+              <mxPoint x="734" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend" value="Legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1200" width="300" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-global" value="Global Traffic Flow" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1240" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-line-1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#ff6666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="1250" as="sourcePoint" />
+            <mxPoint x="280" y="1250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="legend-vnet" value="VNet Peering" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1270" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-line-2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#009900;startArrow=classic;startFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="1280" as="sourcePoint" />
+            <mxPoint x="280" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="legend-frontend" value="Front Door to Apps" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1300" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-line-3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#3399ff;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="1310" as="sourcePoint" />
+            <mxPoint x="280" y="1310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="legend-ssl" value="SSL Certificate" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1330" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-line-4" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#ff9900;startArrow=classic;startFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="1340" as="sourcePoint" />
+            <mxPoint x="280" y="1340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Azure Multi-Region Hub-Spoke Architecture" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="0" width="400" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Private Endpoint Labels -->
+        <mxCell id="pe-label-1" value="Private Endpoint" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=8;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="170" y="780" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pe-label-2" value="Private Endpoint" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=8;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="370" y="780" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pe-label-3" value="Private Endpoint" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=8;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="570" y="780" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pe-label-4" value="Private Endpoint" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=8;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="990" y="480" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pe-label-5" value="Private Endpoint" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=8;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="480" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pe-label-6" value="Private Endpoint" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=8;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="480" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Architecture Notes -->
+        <mxCell id="notes" value="Architecture Notes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1200" width="420" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note-1" value="• Single Hub VNet in East Japan manages all traffic" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1230" width="380" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note-2" value="• Azure Firewall provides centralized security control" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1250" width="380" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note-3" value="• All PaaS services use Private Endpoints" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1270" width="380" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note-4" value="• SSL certificates managed in Key Vault" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1290" width="380" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note-5" value="• Global Front Door provides low-latency access" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1310" width="380" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note-6" value="• Cross-region connectivity via VNet Peering" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1330" width="380" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note-7" value="• Centralized monitoring and logging" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1350" width="380" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
